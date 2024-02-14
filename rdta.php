@@ -4,9 +4,9 @@
     $clientes = getClientes($pdo);
     $ubicaciones = getLocate($pdo);
 
-    //$api = file_get_contents('http://sicalsepcon.net/api/proyectos/api_proyectos.php');
-    //$proyectos = json_decode($api);
-    $proyectos = array();
+    $api = file_get_contents('http://sicalsepcon.net/api/proyectos/api_proyectos.php');
+    $proyectos = json_decode($api);
+    //$proyectos = array();
 
     $fechaActual = date('d/m/Y');
     $fechaSeparada = explode('/', $fechaActual);
@@ -225,30 +225,10 @@
                         </div>
                         <div class="fases">
                             <h3>FACES DEL TRABAJO</h3>
-                            <div class="section3">
+                            <div>
                                 <div>
-                                    <span><input type="checkbox" name="chkSupervicion" id="chkSupervicion"></span>
-                                    <span>SUPERVICION Y CONTROL</span>
-                                    <span><input type="checkbox" name="chkTrabajos" id="chkTrabajos"></span>
-                                    <span>TRABAJOS GENERALES</span>
-                                    <span><input type="checkbox" name="chkaMmtto" id="chkaMmtto"></span>
-                                    <span>MANTENIMIENTOS DE EQUIPOS</span>
-                                </div>
-                                <div>
-                                    <span><input type="checkbox" name="chkObras" id="chkObras"></span>
-                                    <span>OBRAS CIVILES</span>
-                                    <span><input type="checkbox" name="chkEstructuras" id="chkEstructuras"></span>
-                                    <span>MECÁNICA DE ESTRUCTURAS</span>
-                                    <span><input type="checkbox" name="chkPiping" id="chkPiping"></span>
-                                    <span>MECÁNICA PIPING</span>
-                                </div>
-                                <div>
-                                    <span><input type="checkbox" name="chkElectricidad" id="chkElectricidad"></span>
-                                    <span>ELÉCTRICIDAD/INSTRUMENTACION</span>
-                                    <span><input type="checkbox" name="chkIngenieria" id="chkIngenieria"></span>
-                                    <span>INGENIERÍA</span>
-                                    <span><input type="checkbox" name="chkOtro" id="chkOtro"></span>
-                                    <span>OTRO:Campamento</span>
+                                    <span>FASE</span>
+                                    <select name="fases_trabajo" id="fases_trabajo"> </select>
                                 </div>
                                 <div>
                                     <span>SUB-FASE</span>
@@ -273,10 +253,13 @@
                         </div>
                 </section>
                 <section class="actividades">
+                    <div>
                     <h4>
                         <span>DESCRIPCION DE LOS TRABAJOS</span>
                         <a href="#" class="add_table_activity"><i class="fas fa-plus"></i></a>
                     </h4>
+                    <h5 id="message_actividades"class="error_message" >
+                    </h5>
                     <table id="tabla_actividades" class="table_sheet">
                         <thead>
                             <tr>
@@ -291,6 +274,8 @@
                             
                         </tbody>
                     </table>
+
+                    </div>
                 </section>
                 <section class="data2">
                     <div>
@@ -298,6 +283,8 @@
                             <span>PERSONAL</span>
                             <a href="#" class="add_table_personal"><i class="fas fa-plus"></i></a>
                         </h4>
+                        <h5 id="message_personal" class="error_message" >
+                        </h5>
                         <table id="tabla_personal" class="table_sheet">
                             <thead>
                                 <tr>
@@ -323,6 +310,8 @@
                                 <span>EQUIPOS</span>
                                 <a href="#" class="add_table_equips"><i class="fas fa-plus"></i></a>
                             </h4>
+                            <h5 id="message_equipos" class="error_message" >
+                            </h5>
                             <table id="tabla_equipos" class="table_sheet">
                                 <thead>
                                     <tr>
@@ -345,6 +334,8 @@
                                 <span>MATERIALES UTILIZADOS</span>
                                 <a href="#" class="add_table_materials"><i class="fas fa-plus"></i></a>
                             </h4>
+                            <h5 id="message_materiales" class="error_message" >
+                            </h5>
                             <table id="tabla_materiales" class="table_sheet">
                                 <thead>
                                     <tr>
