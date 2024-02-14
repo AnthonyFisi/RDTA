@@ -1,0 +1,281 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+}
+
+.texto_centro {
+    display: block;
+    text-align: center;
+}
+
+.table_sheet{
+    width: 100%;
+    font-size: 0.7rem;
+
+    thead{
+        background:silver;
+    }
+
+    th{
+        line-height: 1.5rem;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    td {
+        border: 1px solid #ccc;
+    }
+}
+
+.oculto{
+    display: none;
+}
+
+.main{
+    width: 100%;
+    height: 95vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: sans-serif;
+
+    select {
+        width: 100%;
+        height: 1.5rem;
+        border: 1px solid #ccc;
+    }
+
+    .sheet{
+        width: 50%;
+        max-height: 95vh;
+        overflow:auto;
+        border: 1px solid #ccc;
+        position: relative;
+        box-shadow: .5rem .5rem .5rem #333;
+
+        h3 {
+            background:#005C85;
+            text-align: center;
+            line-height: 1.5rem;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            padding: .3rem;
+            color: #fff;
+        }
+
+        h4 {
+            background:#005C85;
+            text-align: center;
+            line-height: 1.5rem;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: .3rem .5rem;
+
+            a{
+                color: inherit;
+            }
+        }
+
+        .sheet_form_header{
+            display: grid;
+            grid-template-columns: .2fr 1fr .2fr;
+            font-size: 0.8rem;
+            border: 1px solid #ccc;
+
+            .logo{
+                text-align: center;
+                border-right: 1px solid #ccc;
+            }
+
+            .titulo_rda {
+                border-right: 1px solid #ccc;
+
+                div:nth-child(1) {
+                    text-align: center;
+                    gap: 10px;
+                    padding: 5px;
+                }
+
+                div:nth-child(2),div:nth-child(3){
+                    display: grid;
+                    grid-template-columns: .3fr 1fr;
+                    padding: .2rem 1rem;
+
+                    input {
+                        border: 1px solid #ccc;
+                        height: 1.5rem;
+                    }
+                }
+            }
+
+            .sgi_code{
+                div {
+                    padding: .5rem;
+                    border-bottom: 1px solid #ccc;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .data1 {
+            display: grid;
+            grid-template-columns: .57fr .5fr 2.5fr .4fr;
+            font-size: 0.6rem;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+
+            .clima,.ubicacion,.fases{
+                border-right: 1px solid #ccc;
+                line-height: 1.2rem;
+            }
+
+            .ubicacion{
+                .section2 {
+                    padding: .5rem;
+                }
+            }
+
+            .section1,.section2{
+                div{
+                    display: grid;
+                    grid-template-columns: 1fr .5fr .5fr;
+                    
+                    span:nth-child(1){
+                        padding-left: 10px;;
+                    }
+                   
+                    span:nth-child(2),span:nth-child(3){
+                        text-align: center;
+                    }
+                }
+            }
+
+            .section3{
+                padding: 3px 5px;
+                line-height: 1.2rem;
+
+                div:nth-child(1),div:nth-child(2),div:nth-child(3) {
+                    display: grid;
+                    grid-template-columns: .1fr 1fr .1fr 1fr .1fr 1fr;
+                    gap: 5px;
+                }
+
+                div:nth-child(4){
+                    display: grid;
+                    grid-template-columns: max-content 1fr;
+                    gap: 1rem;
+                    
+                    input{
+                        width: 95%;
+                        height: 1.5rem;
+                        border: 1px solid #ccc;
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .fecha {
+                .section4{
+                    padding: 0 5px;
+                    line-height: 1.2rem;
+
+                    div:nth-child(1),div:nth-child(2) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr ;
+                        gap: 5px;
+                        text-align: center;
+                    }
+
+                    div:nth-child(3),div:nth-child(4) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .actividades{
+            display: grid;
+            grid-template-columns: 1fr;
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+        }
+
+        .leyenda{
+            border: 1px solid #ccc;
+            padding-left: 20px;
+            font-size: 0.6rem;
+        }
+
+        .inoperatividad {
+            border: 1px solid #ccc;
+            font-size: 0.8rem;
+
+            div:nth-child(2) {
+                display: grid;
+                grid-template-columns: auto .2fr auto 1fr;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            div:nth-child(3),div:nth-child(4) {
+                display: grid;
+                grid-template-columns:  .1fr 1fr .1fr 1fr .1fr 1fr .1fr 1fr;
+                gap: 10px;
+                padding: 5px;
+                font-size: 0.7rem;
+
+                span:nth-child(odd){
+                    margin-top: 2px;
+                    padding: 2px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .comentarios{
+            textarea{
+                resize: none;
+                width:95%;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 15px;
+                border: none;
+            }
+        }
+
+        .hse{
+            border: 1px solid #ccc;
+            font-size: 0.8rem;
+            
+            >div {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+
+        .options{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            gap: 1rem;
+
+            button{
+                height: 3rem;
+                border: none;
+                border: 1px solid #c2c2c2;
+                border-radius: .25rem;
+                background: silver;
+                transition: translateY .5s;
+
+                &:hover{
+                    transform:translateY(-2px);
+                }
+            }
+        }
+    }
+}

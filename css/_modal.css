@@ -1,0 +1,251 @@
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    z-index: 35;
+
+    .modal__body {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+
+        
+        .modal__body__work{
+            right: 25%;
+            left: 25%; 
+        }
+
+        .modal__body__login{
+
+            .dialogo__cuerpo_login{
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                line-height: 2rem;
+                gap: 1rem;
+
+                input {
+                    line-height: 2rem;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                }
+
+                button {
+                    line-height: 2rem;
+                    border: 1px solid #ccc;
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        .modal__body__work,.modal__body__login {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 20px;
+            opacity: 1;
+            transition: opacity 0.5s;
+
+            .dialog__titulo {
+                display: flex;
+                justify-content: space-between;
+                background: #7c78d1;
+                color: #fff;
+                padding: 0.5rem;
+
+                border-radius: 10px 10px 0px 0px;
+
+                .close__dialog{
+                    color: #fff;
+                }
+            }
+
+            .dialogo__cuerpo {
+                padding: 1rem;
+                line-height: 2.5rem;
+
+                .dialog__data{
+                    .dialog_section {
+                        display: grid;
+                        grid-template-columns: .2fr 1fr .1fr .1fr;
+                        gap: 10px;
+                        margin-bottom: 2rem;
+    
+                        .section__click__option {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 2px solid #fff;
+                            border-radius: 10px;
+
+                            &:hover{
+                                border: 2px solid #c2c2c2;
+                            }
+                        }
+
+                        .section__click__label{
+                            font-weight: bold;
+                        }
+                        
+                        .section__click__input{
+                            border: none;
+                            border: 1px solid #c2c2c2;
+                            padding-left: 20px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+
+                .dialog__table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    font-size: .8rem;
+                    border: 1px dotted #c2c2c2;
+
+                    .dialog__table_head{
+                        background: #e2d8ff;
+                    }
+
+                    .input_table{
+                        height: 2rem;
+                        border: none;
+                        width: 100%;
+                        padding: 1rem;
+                    }
+
+                    .dialog__table_body{
+                        .dialog__table__tr {
+                            * {
+                                border: 1px dotted #c2c2c2;
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .dialog__table_options{
+                    display: flex;
+                    gap: 30px;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    div:first-child {
+                        display: flex;
+                        gap: 20px;
+                    }
+
+                    .table__click__option {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 2px solid #fff;
+                            border-radius: 8px;
+                            padding: 10px;
+
+                            &:hover{
+                                border: 2px solid #c2c2c2;
+                            }
+                    }
+                }
+            }
+
+            .dialogo__opciones {
+                padding: 1rem;
+                text-align: right;
+
+                .btn_grabar_responsables{
+                    padding: 9px 5rem;
+                }
+            }
+
+            
+        }
+
+        .modal__body__list {
+            width: 50%;
+            height: 30rem;
+            background: #fff;
+            font-family: sans-serif;
+            box-shadow: 1rem 1rem 1rem #000;
+
+            .modal__body__list__title{
+                background:#000;
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                padding: .75rem ;
+
+                a{
+                    color: #fff;
+                }
+            }
+
+            .modal__body__list__body{
+                padding: 1rem;
+
+                input{
+                    width: 100%;
+                    height: 2rem;
+                    padding-left: 20px;
+                    border: 1px solid #c2c2c2;
+                    border-radius: .75rem;
+                }
+
+                .container__table{
+                    max-height: 22rem;
+                    overflow: auto;
+                    margin-top: 1rem;
+                    border: 1px dotted #c2c2c2;
+                    
+                    table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        font-size: 0.8em;
+
+                        thead{
+                            background:#000;
+                            color:#fff;
+                            height: 2rem;
+                            position: sticky;
+                            top: 0;
+                        }
+
+                        tbody{
+                            *{
+                                border: 1px dotted #c2c2c2;
+                            }
+
+                            tr {
+                                height: 1.5rem;
+
+                                td {
+                                    padding-left: 15px;
+                                    cursor: default;
+
+                                    a{
+                                        display: block;
+                                        text-align: center;
+                                    }
+                                    
+                                    input[type="number"] {
+                                        border: none;
+                                    }
+                                }
+
+                                &:hover{
+                                    background:#2d89f1;
+                                }
+                            }
+                        }
+                    }
+                }                
+            }
+
+            
+        }
+    }
+}

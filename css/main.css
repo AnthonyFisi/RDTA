@@ -1,0 +1,231 @@
+@import "_modal.css";
+@import "_mensajes.css";
+@import "_rtda.css";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+
+
+ul, li {
+    list-style: none
+}
+
+svg{
+    pointer-events:none;
+}
+
+select {
+    padding-left: 20px;
+}
+
+.pdf__generator__view {
+    display:block;
+    width:2rem;
+    height: auto;
+}
+
+.barra_derecha,
+.barra_derecha_responsables{
+    position: fixed;
+    width: 20vw;
+    background-color: burlywood;
+    height: 100vh;
+    right: -100%;
+    z-index: 99999;
+    padding: 1rem;
+    transition: right 0.3s ease;
+
+    #select_table,#select_table_responsables{
+        margin-top: 2rem;
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px dotted #c2c2c2;
+
+        
+
+        thead{
+            background:#000;
+            color: #fff;
+            height: 2rem
+        }
+
+        tbody{
+            .table___row__code {
+                height: 2rem;
+
+                td {
+                    border: 1px dotted #c2c2c2;
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    background:#fff;
+                }
+            }
+        }
+    }
+}
+
+#document_list {
+    border: 1px dotted #c2c2c2;
+
+    .table___row__code{
+        line-height: 2.5rem;
+        cursor: default;
+        transition: background .5s;
+        border: 1px dotted #c2c2c2;
+
+        &:hover{ 
+            background:#c2c2c2;
+        }
+    }
+}
+
+.preview {
+    padding: 2rem;
+    height: 75vh;
+    width: 100%;
+
+    .preview__pdf__document{
+        width: 100%;
+        height: -webkit-fill-available;
+        border: 0;
+    }
+}
+
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    background: #D2E1ED;
+    right: 100%;
+
+    .wrap__header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-bottom: 4px solid #c2c2c2;
+
+        .menu__main{
+            position: absolute;
+            right: 15px;
+            border: 1px solid #c2c2c2;
+            background: #fff;
+            line-height: 1rem;
+            font-size: 0.7rem;
+            box-shadow: 4px 5px 4px #c2c2c2;
+            z-index: 9999;
+
+            .nav__link {
+                padding: .5rem 1rem ;
+                cursor: pointer;
+                transition: hover 0.5s;
+                display: block;
+
+                &:hover{
+                    background:#a6a6a6
+                }
+            }
+        }
+    }
+
+    .wrap__body{
+        width: 100%;
+        height: 90vh;
+        padding: 0 1rem;
+        overflow: auto;
+        margin-top: 1rem;
+
+        #document_list {
+            width: 100%;
+            border-collapse: collapse;
+            
+
+            .document__list__thead {
+                position: sticky;
+                top: 0;
+                background:#005C85;
+                height: 2rem;
+                font-size: .8rem;
+                color:#D2E1ED;
+            }
+
+            .document__list__body {
+                height: 2.5rem;
+                font-size: .8rem;
+                color:#000;
+                border: 2px dotted #c2c2c2;
+
+                .body__row {
+                    line-height: 2rem;
+                    transition: hover 0.2s ease;
+                    cursor: pointer;
+
+                    .body__column {
+                        border-left: 2px dotted #c2c2c2;
+                        padding-left: 15px;
+                    }
+
+                    &:hover{
+                        background:goldenrod
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.oculto{
+    display: none;
+}
+
+.sin__eventos{
+    pointer-events: none;
+}
+
+.texto_centro{
+    text-align: center;
+}
+
+.close_button {
+    font-size: 1.5rem;
+    color: #a2a2a2;
+    position: absolute;
+    right: -15px;
+    top: -1rem;
+    border: 1px solid #a2a2a2;
+    padding: 1px 7px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.img__table {
+    display: flex;
+    justify-content: center;
+}
