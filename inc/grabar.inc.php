@@ -74,13 +74,13 @@
                                     $cabecera->proyecto->{'value'},
                                     20,
                                     $cabecera->ubicacion->{'value'},
-                                    "",
+                                    "2024-10-10",
                                     $parametros['diasemana'],
                                     $cabecera->observaciones->{'value'},
                                     $cabecera->horasInoperativas->{'value'},
                                     $cabecera->horarioInoperativo->{'value'},
                                     $cabecera->chkAdversidad->{'prop'},
-                                    $cabecera->chkFirma->{'prop'},
+                                    empty($cabecera->chkFirma->{'prop'}) ? "" : $cabecera->chkFirma->{'prop'},
                                     $cabecera->chkLiberacion->{'prop'},
                                     $cabecera->chkProcedimiento->{'prop'},
                                     $cabecera->chkFallaEquipo->{'prop'},
@@ -111,8 +111,8 @@
                     "indice" => $indice);
                        
         } catch ( PDOException $e) {
-            echo "Error: " . $e->getMessage;
-            return false;
+            return array("respuesta" => false,
+                         "message" => $e->getMessage());
         }
 
         /*$indice = lastInsert($pdo);
